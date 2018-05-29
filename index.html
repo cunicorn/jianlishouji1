@@ -330,6 +330,46 @@
 			<img src="img/zanting1.png">
 		</p>
 	</div>
+<div class="doup">
+	<img src="img/doup.png">
+</div>
+
+<div class="rte">
+<div class="rioc">
+<div class="part p0">
+			<div class="title a">关于我们</div>
+			<div class="content">
+		<p class="content_h1 animated bounceIn">我是刘卫硕</p>
+爱学习并且自主学习能力强，善于从网上查找资料进行学习，爱钻研,正式项目经验还不够,需要到公司多学习一些以增长经验
+			</div>
+		</div>
+		<div class="part p1">
+			<div class="title b">技能外传</div>
+			<div class="content">
+<p class="content_h1 animated bounceIn">掌握技能</p>
+扎实的基础知识，熟练HTML(5)/CSS(3)/Javascript；  
+熟悉：jQuery、VueJs、Bootstrap,Git swiper  mysql  php 等；
+工作习惯良好：自驱动，擅合作，代码清晰整洁；  
+			</div>
+		</div>
+		<div class="part p2">
+			<div class="title c">个人优势</div>
+			<div class="content">
+				<p class="content_h1 animated bounceIn">我的优势</p>
+爱学习并且自主学习能力强，善于从网上查找资料进行学习，爱钻研。
+熟练掌握职业技能，对从事web前端工作有浓厚的兴趣，从而有很大的动力
+性格开朗，善于沟通，有较强的组织及协调能力，具有很强的抗压能力,具有很强的适应能力.
+			</div>
+		</div>
+		<div class="part p3">
+			<div class="title d">个人信仰</div>
+			<div class="content">
+				<p class="content_h1 animated bounceIn">我的信仰</p>
+				我尊崇能力至上，一个人要想有出息，比不可少的就是能力，我正在积攒着我的能力。
+			</div>
+	</div>
+</div>
+</div>
 		</div>
 		</div>
 <script src="js/jquery.min.js"></script>
@@ -478,6 +518,31 @@ $('#bo').show();
 clearInterval(t);
 });
 $('#zan').click();
+
+
+$('.doup').click(function() {
+document.body.scrollTop= 950;
+});
+
+var w1=$('.title').width();
+	var w2=$('.content').width();
+	$('.title').click(function() {
+		var p=$(this).parent();
+		var n=p.index();
+		$('.part').each(function(i,el) {
+			if(i<=n) {
+				//前n项的标题都移动到左侧
+				// $('.part').eq(i).css('left',i*w1+'px');
+				// $(el).css('left',i*w1+'px');
+				$(this).css('left',i*w1+'px');
+			}else{
+				//其余项的标题在右侧
+				$(this).css('left',i*w1+w2+'px');
+			}
+		});
+	});
+
+
 
 </script>
 
